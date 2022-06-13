@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.gif {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: -170px;
+  background-image: url(./man.gif);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.dices {
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.title {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  transform: translate(-3%, -1%);
+  width: 6%;
+}
+
+.highScor {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.dices .col1,
+.dices .col2,
+.dices .col3 {
+  width: 27%;
+  height: 100%;
+  background: rgba(234, 234, 234, 0.397);
+  border: 1px solid rgb(160, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.dices .col1 span,
+.dices .col2 span,
+.dices .col3 span {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.dice {
+  width: 80%;
+  margin-top: -80px;
+}
+
+.reward {
+  width: 40%;
+  height: 10%;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -7%);
+  margin: 0 auto;
+  background: rgba(34, 34, 34, 0.8);
+  border: 1px solid rgb(160, 160, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.reward--item {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.draw {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 110px;
+  height: 45px;
+  cursor: pointer;
+  outline: none;
+  background: rgb(20, 20, 20);
+  color: wheat;
+  border-radius: 7px;
+  font-size: 0.9rem;
+}
+
+/* Section--------------------------Instruction */
+
+.inst,
+.again {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(20, 20, 20);
+  color: wheat;
+  transition: all 0.3s;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+}
+.inst {
+  top: 4%;
+  right: 3%;
+}
+.again {
+  bottom: 4%;
+  left: 3%;
+}
+
+.inst:hover,
+.again:hover {
+  box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.495);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.ins {
+  z-index: 11;
+  position: absolute;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  border-radius: 7px;
+  box-shadow: 4px 7px 30px 0px rgba(0, 0, 0, 0.349);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px 15px;
+}
+
+.ins h3 {
+  font-size: 2rem;
+  color: #212121;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: bold;
+  border-bottom: 2px solid;
+}
+
+.ins ol {
+  list-style-type: circle;
+}
+
+.ins ol li {
+  margin: 7px 0;
+}
+
+.ins ol li p {
+  color: rgb(123, 123, 123);
+}
+
+.ins ol li p .fst,
+.ins ol li p .snd,
+.ins ol li p .trd,
+.ins ol li p .fth {
+  color: rgb(22, 22, 22);
+  font-weight: bold;
+}
+
+.cross {
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 12.5px;
+  border-radius: 50%;
+  color: rgb(255, 68, 68);
+}
+
+.hidden {
+  display: none;
+}
+
+.ani {
+  animation: ani 0.3s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes ani {
+  100% {
+    transform: scale(1.1);
+  }
+}

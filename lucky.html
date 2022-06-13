@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Draw</title>
+    <link rel="stylesheet" href="./draw.css" />
+  </head>
+  <body>
+    <div class="gif"></div>
+    <button class="inst">Rules</button>
+    <button class="again">New Try</button>
+    <div class="overlay hidden"></div>
+    <div class="ins hidden">
+      <span class="cross">&#9932;</span>
+      <h3>Instruction</h3>
+      <ol>
+        <li>
+          <p>
+            Press <span class="fst">' Draw '</span> button to generate random
+            dice number.
+          </p>
+        </li>
+        <li>
+          <p>
+            If you match <span class="snd">' 3 '</span> dice at one time, you
+            will get reward!
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If you are lucky, you can break your previous
+            <span class="fth">' High score '</span>.
+          </p>
+        </li>
+        <li><p>Good Luck.</p></li>
+      </ol>
+    </div>
+    <img src="./logo.png" class="title" alt="" />
+    <div class="dices hidden">
+      <div class="col1">
+        <img src="./dice-1.png" alt="" class="dice d1" />
+        <span class="dice-num1">1</span>
+      </div>
+      <div class="col2">
+        <img src="./dice-1.png" alt="" class="dice d2" />
+        <span class="dice-num2">1</span>
+      </div>
+      <div class="col3">
+        <img src="./dice-1.png" alt="" class="dice d3" />
+        <span class="dice-num3">1</span>
+      </div>
+    </div>
+
+    <button class="draw">Draw</button>
+    <div class="reward">
+      <span class="reward--item"></span>
+    </div>
+    <p class="highScor">High Score: <span class="highScore">0</span></p>
+
+    <script src="./draw.js"></script>
+  </body>
+</html>
